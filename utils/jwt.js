@@ -21,18 +21,16 @@ const createCookie = ({res, user, refreshToken})=>{
     res.cookie('accessToken',accessTokenJwt,{withCredentials: true,
         httpOnly:true,
         expires: new Date(Date.now()+ oneDay),
-        // secure:process.env.NODE_ENV ==='production',
-        secure: true,
+        secure:process.env.NODE_ENV ==='production',
         signed:true,
-        sameSite: "strict"
+        sameSite: None,
     })
     res.cookie('refreshToken',refreshTokenJwt,{
         httpOnly:true,
         expires: new Date(Date.now()+ longerExp),
-        // secure:process.env.NODE_ENV ==='production',
-        secure: true,
+        secure:process.env.NODE_ENV ==='production',
         signed:true,
-        sameSite: "strict"
+        sameSite: None,
     })
 }
 
