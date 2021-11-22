@@ -42,7 +42,7 @@ app.use(
   })
 );
 app.use(helmet());
-app.use(cors({credentials: true, origin:"https://jb-stores.netlify.app"}));   //{credentials: true, origin:"http://localhost:3000"}
+app.use(cors({credentials: true, origin:true}));   //{credentials: true, origin:"http://localhost:3000"}
 app.use(xss());
 app.use(mongoSanitize());
 
