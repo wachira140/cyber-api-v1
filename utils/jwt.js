@@ -25,7 +25,7 @@ const createCookie = ({res, user, refreshToken})=>{
         signed:true,
         sameSite: "None",
     })
-    res.cookie('refreshToken',refreshTokenJwt,{
+    res.cookie('refreshToken',refreshTokenJwt,{withCredentials: true,
         httpOnly:true,
         expires: new Date(Date.now()+ longerExp),
         secure:process.env.NODE_ENV ==='production',
