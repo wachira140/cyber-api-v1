@@ -44,7 +44,6 @@ app.use(
 app.use(helmet());
 app.use(cors({ 
   credentials: true, 
-  exposedHeaders :["set-cookie"],
   origin:'https://jb-stores.netlify.app'
 }));   
 
