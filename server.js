@@ -42,7 +42,7 @@ app.use(
   })
 );
 app.use(helmet());
-app.use(cors({credentials: true, origin:true}));   //{credentials: true, origin:"http://localhost:3000"}
+app.use(cors({credentials: true, origin:"https://cyber-api-v1.herokuapp.com/api/v1"}));   //{credentials: true, origin:"http://localhost:3000"}
 app.use(xss());
 app.use(mongoSanitize());
 
