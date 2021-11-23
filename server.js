@@ -42,8 +42,14 @@ app.use(
   })
 );
 app.use(helmet());
-app.use(cors({ credentials: true, origin:'https://jb-stores.netlify.app'}));   //{credentials: true, origin:"http://localhost:3000"}
-app.use(xss());
+app.use(cors({ 
+  credentials: true, 
+  exposedHeaders :["set-cookie"],
+  origin:'https://jb-stores.netlify.app'
+}));   
+
+
+  app.use(xss());
 app.use(mongoSanitize());
 
 
