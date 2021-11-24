@@ -43,7 +43,7 @@ app.use(
 );
 app.use(helmet());
 app.use(cors({
-  origin:"https://jb-stores.netlify.app",
+  origin:true,
   credentials:true
 }));   
 
