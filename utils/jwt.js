@@ -20,16 +20,17 @@ const createCookie = ({res, user, refreshToken})=>{
   
     res.cookie('accessToken',accessTokenJwt,{
         httpOnly:true,
-        maxAge:new Date(Date.now()+ oneDay),
         expires: new Date(Date.now()+ oneDay),
         secure:process.env.NODE_ENV ==='production',
         signed:true,
+        sameSite:"Strict"
     })
     res.cookie('refreshToken',refreshTokenJwt,{
         httpOnly:true,
         expires: new Date(Date.now()+ longerExp),
         secure:process.env.NODE_ENV ==='production',
         signed:true,
+        sameSite:"Strict"
     })
 }
 
