@@ -23,7 +23,8 @@ const createCookie = ({res, user, refreshToken})=>{
         expires: new Date(Date.now()+ oneDay),
         secure:process.env.NODE_ENV ==='production',
         signed:true,
-        path:'https://jb-stores.netlify.app'
+        path:'https://jb-stores.netlify.app',
+        sameSite = "None"
     })
     res.cookie('refreshToken',refreshTokenJwt,{
         httpOnly:true,
