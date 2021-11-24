@@ -42,7 +42,7 @@ app.use(
   })
 );
 app.use(helmet());
-app.use(cors( { origin:"https://jb-stores.netlify.app"}));   
+app.use(cors());   
 
 
   app.use(xss());
