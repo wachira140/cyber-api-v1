@@ -33,7 +33,7 @@ const register = async(req, res)=>{
         verificationToken})
 
 
-const origin = 'https://jb-stores.netlify.app'
+const origin = 'https://www.nairobiaccessories.com'
 
 await sendVerificationEmail({
     name:user.name,
@@ -157,7 +157,7 @@ const forgotPassword = async(req, res)=>{
     const user = await User.findOne({ email })
     
     if(user){
-        const origin = 'https://jb-stores.netlify.app'
+        const origin = 'https://www.nairobiaccessories.com'
         const passwordToken = crypto.randomBytes(70).toString('hex')
         await sendResetPasswordEmail({ 
             name:user.name, 
